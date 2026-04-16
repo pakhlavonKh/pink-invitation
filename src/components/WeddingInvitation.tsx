@@ -4,18 +4,41 @@ import locationImg from "@/assets/location.jpg";
 
 function HeroSection() {
   return (
-    <section className="relative w-full h-screen">
-      <img
-        src={coupleHero}
-        alt="Barbara & Dilan"
-        className="absolute inset-0 w-full h-full object-cover object-top"
-      />
-      <div className="absolute inset-0 bg-black/25" />
+    <section className="relative w-full h-screen bg-gradient-to-br from-pink-100 via-white to-blue-100 overflow-hidden">
+      {/* Decorative shapes or SVGs can be added here for more style */}
+      <div className="absolute inset-0 pointer-events-none select-none">
+        {/* Floating pink hearts */}
+        <svg className="absolute animate-float-slow left-[10%] top-[15%] w-16 h-16" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.5 2.5C21.0147 2.5 18.7616 3.94643 17.5 6.02941C16.2384 3.94643 13.9853 2.5 11.5 2.5C7.35786 2.5 4 5.85786 4 10C4 18.5 17.5 26.5 17.5 26.5C17.5 26.5 31 18.5 31 10C31 5.85786 27.6421 2.5 23.5 2.5Z" fill="#f472b6"/>
+        </svg>
+        <svg className="absolute animate-float-fast right-[12%] top-[25%] w-10 h-10 opacity-80" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.5 2.5C21.0147 2.5 18.7616 3.94643 17.5 6.02941C16.2384 3.94643 13.9853 2.5 11.5 2.5C7.35786 2.5 4 5.85786 4 10C4 18.5 17.5 26.5 17.5 26.5C17.5 26.5 31 18.5 31 10C31 5.85786 27.6421 2.5 23.5 2.5Z" fill="#f472b6"/>
+        </svg>
+        <svg className="absolute animate-float-medium left-[25%] bottom-[18%] w-12 h-12 opacity-70" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.5 2.5C21.0147 2.5 18.7616 3.94643 17.5 6.02941C16.2384 3.94643 13.9853 2.5 11.5 2.5C7.35786 2.5 4 5.85786 4 10C4 18.5 17.5 26.5 17.5 26.5C17.5 26.5 31 18.5 31 10C31 5.85786 27.6421 2.5 23.5 2.5Z" fill="#f472b6"/>
+        </svg>
+        <svg className="absolute animate-float-slow right-[20%] bottom-[10%] w-14 h-14 opacity-60" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.5 2.5C21.0147 2.5 18.7616 3.94643 17.5 6.02941C16.2384 3.94643 13.9853 2.5 11.5 2.5C7.35786 2.5 4 5.85786 4 10C4 18.5 17.5 26.5 17.5 26.5C17.5 26.5 31 18.5 31 10C31 5.85786 27.6421 2.5 23.5 2.5Z" fill="#f472b6"/>
+        </svg>
+        {/* 4 more hearts */}
+        <svg className="absolute animate-float-fast left-[40%] top-[10%] w-8 h-8 opacity-70" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.5 2.5C21.0147 2.5 18.7616 3.94643 17.5 6.02941C16.2384 3.94643 13.9853 2.5 11.5 2.5C7.35786 2.5 4 5.85786 4 10C4 18.5 17.5 26.5 17.5 26.5C17.5 26.5 31 18.5 31 10C31 5.85786 27.6421 2.5 23.5 2.5Z" fill="#f472b6"/>
+        </svg>
+        <svg className="absolute animate-float-medium right-[30%] top-[5%] w-9 h-9 opacity-60" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.5 2.5C21.0147 2.5 18.7616 3.94643 17.5 6.02941C16.2384 3.94643 13.9853 2.5 11.5 2.5C7.35786 2.5 4 5.85786 4 10C4 18.5 17.5 26.5 17.5 26.5C17.5 26.5 31 18.5 31 10C31 5.85786 27.6421 2.5 23.5 2.5Z" fill="#f472b6"/>
+        </svg>
+        <svg className="absolute animate-float-slow left-[15%] bottom-[8%] w-11 h-11 opacity-50" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.5 2.5C21.0147 2.5 18.7616 3.94643 17.5 6.02941C16.2384 3.94643 13.9853 2.5 11.5 2.5C7.35786 2.5 4 5.85786 4 10C4 18.5 17.5 26.5 17.5 26.5C17.5 26.5 31 18.5 31 10C31 5.85786 27.6421 2.5 23.5 2.5Z" fill="#f472b6"/>
+        </svg>
+        <svg className="absolute animate-float-fast right-[8%] bottom-[20%] w-7 h-7 opacity-50" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.5 2.5C21.0147 2.5 18.7616 3.94643 17.5 6.02941C16.2384 3.94643 13.9853 2.5 11.5 2.5C7.35786 2.5 4 5.85786 4 10C4 18.5 17.5 26.5 17.5 26.5C17.5 26.5 31 18.5 31 10C31 5.85786 27.6421 2.5 23.5 2.5Z" fill="#f472b6"/>
+        </svg>
+      </div>
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-        <h1 className="text-white leading-none font-script text-[clamp(4rem,8vw,7rem)]">Barbara</h1>
-        <p className="text-white/80 text-3xl my-2 font-script">&</p>
-        <h1 className="text-white leading-none font-script text-[clamp(4rem,8vw,7rem)]">Dilan</h1>
-        <p className="mt-6 text-white/80 tracking-[0.35em] uppercase text-sm">20 July 2025</p>
+        <h1 className="text-gray-900 leading-none font-script text-[clamp(4rem,8vw,7rem)] drop-shadow-lg">Barbara</h1>
+        <p className="text-gray-700 text-3xl my-2 font-script">&</p>
+        <h1 className="text-gray-900 leading-none font-script text-[clamp(4rem,8vw,7rem)] drop-shadow-lg">Dilan</h1>
+        <p className="mt-6 text-gray-700 tracking-[0.35em] uppercase text-sm">20 July 2025</p>
       </div>
     </section>
   );

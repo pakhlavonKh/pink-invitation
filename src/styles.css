@@ -147,6 +147,34 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+@keyframes float-slow {
+  0% { transform: translateY(0) scale(1) rotate(-8deg); }
+  50% { transform: translateY(-40px) scale(1.08) rotate(8deg); }
+  100% { transform: translateY(0) scale(1) rotate(-8deg); }
+}
+
+@keyframes float-medium {
+  0% { transform: translateY(0) scale(1) rotate(6deg); }
+  50% { transform: translateY(-30px) scale(1.06) rotate(-6deg); }
+  100% { transform: translateY(0) scale(1) rotate(6deg); }
+}
+
+@keyframes float-fast {
+  0% { transform: translateY(0) scale(1) rotate(-4deg); }
+  50% { transform: translateY(-20px) scale(1.04) rotate(4deg); }
+  100% { transform: translateY(0) scale(1) rotate(-4deg); }
+}
+
+.animate-float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+.animate-float-medium {
+  animation: float-medium 5s ease-in-out infinite;
+}
+.animate-float-fast {
+  animation: float-fast 3.5s ease-in-out infinite;
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
