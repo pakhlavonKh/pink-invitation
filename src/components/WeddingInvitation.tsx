@@ -4,41 +4,95 @@ import locationImg from "@/assets/location.jpg";
 
 function HeroSection() {
   return (
-    <section className="relative w-full h-screen bg-gradient-to-br from-pink-100 via-white to-blue-100 overflow-hidden">
-      {/* Decorative shapes or SVGs can be added here for more style */}
+    <section className="relative w-full h-screen overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${coupleHero})`,
+        }}
+      />
+
+      {/* Atmospheric Overlays - Layered for Cinematic Effect */}
+      
+      {/* Dark warm overlay base */}
+      <div className="absolute inset-0 bg-black/40" />
+      
+      {/* Warm golden-brown gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-orange-900/20 via-amber-900/30 to-amber-950/50" />
+      
+      {/* Warm vignette edges */}
+      <div className="absolute inset-0 bg-radial-vignette opacity-40" style={{
+        background: 'radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.6) 100%)'
+      }} />
+      
+      {/* Subtle noise texture */}
+      <div className="absolute inset-0 opacity-5" style={{
+        backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="2"/%3E%3C/filter%3E%3Crect width="400" height="400" fill="%23000" filter="url(%23noiseFilter)"/%3E%3C/svg%3E")',
+        backgroundSize: '400px 400px'
+      }} />
+
+      {/* Radial glow behind text - golden */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-amber-200/10 via-orange-300/5 to-transparent rounded-full blur-3xl pointer-events-none" />
+
+      {/* Elegant floating leaves - minimal and refined */}
       <div className="absolute inset-0 pointer-events-none select-none">
-        {/* Floating pink hearts */}
-        <svg className="absolute animate-float-slow left-[10%] top-[15%] w-16 h-16" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M23.5 2.5C21.0147 2.5 18.7616 3.94643 17.5 6.02941C16.2384 3.94643 13.9853 2.5 11.5 2.5C7.35786 2.5 4 5.85786 4 10C4 18.5 17.5 26.5 17.5 26.5C17.5 26.5 31 18.5 31 10C31 5.85786 27.6421 2.5 23.5 2.5Z" fill="#f472b6"/>
+        {/* Leaf 1 - top left */}
+        <svg className="absolute animate-float-slow left-[8%] top-[12%] w-12 h-12 opacity-40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 5C50 5 35 20 35 40C35 55 40 65 50 70C60 65 65 55 65 40C65 20 50 5 50 5Z" fill="#d4a574" opacity="0.7"/>
+          <path d="M50 15C50 15 45 22 45 32C45 40 48 45 50 48C52 45 55 40 55 32C55 22 50 15 50 15Z" stroke="#8b6f47" strokeWidth="0.5"/>
         </svg>
-        <svg className="absolute animate-float-fast right-[12%] top-[25%] w-10 h-10 opacity-80" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M23.5 2.5C21.0147 2.5 18.7616 3.94643 17.5 6.02941C16.2384 3.94643 13.9853 2.5 11.5 2.5C7.35786 2.5 4 5.85786 4 10C4 18.5 17.5 26.5 17.5 26.5C17.5 26.5 31 18.5 31 10C31 5.85786 27.6421 2.5 23.5 2.5Z" fill="#f472b6"/>
+
+        {/* Leaf 2 - right side */}
+        <svg className="absolute animate-float-medium right-[10%] top-[20%] w-10 h-10 opacity-35" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 5C50 5 35 20 35 40C35 55 40 65 50 70C60 65 65 55 65 40C65 20 50 5 50 5Z" fill="#c9975d" opacity="0.6"/>
+          <path d="M50 15C50 15 45 22 45 32C45 40 48 45 50 48C52 45 55 40 55 32C55 22 50 15 50 15Z" stroke="#8b6f47" strokeWidth="0.5"/>
         </svg>
-        <svg className="absolute animate-float-medium left-[25%] bottom-[18%] w-12 h-12 opacity-70" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M23.5 2.5C21.0147 2.5 18.7616 3.94643 17.5 6.02941C16.2384 3.94643 13.9853 2.5 11.5 2.5C7.35786 2.5 4 5.85786 4 10C4 18.5 17.5 26.5 17.5 26.5C17.5 26.5 31 18.5 31 10C31 5.85786 27.6421 2.5 23.5 2.5Z" fill="#f472b6"/>
+
+        {/* Leaf 3 - bottom left */}
+        <svg className="absolute animate-float-fast left-[12%] bottom-[15%] w-11 h-11 opacity-30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 5C50 5 35 20 35 40C35 55 40 65 50 70C60 65 65 55 65 40C65 20 50 5 50 5Z" fill="#d4a574" opacity="0.5"/>
+          <path d="M50 15C50 15 45 22 45 32C45 40 48 45 50 48C52 45 55 40 55 32C55 22 50 15 50 15Z" stroke="#8b6f47" strokeWidth="0.5"/>
         </svg>
-        <svg className="absolute animate-float-slow right-[20%] bottom-[10%] w-14 h-14 opacity-60" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M23.5 2.5C21.0147 2.5 18.7616 3.94643 17.5 6.02941C16.2384 3.94643 13.9853 2.5 11.5 2.5C7.35786 2.5 4 5.85786 4 10C4 18.5 17.5 26.5 17.5 26.5C17.5 26.5 31 18.5 31 10C31 5.85786 27.6421 2.5 23.5 2.5Z" fill="#f472b6"/>
-        </svg>
-        {/* 4 more hearts */}
-        <svg className="absolute animate-float-fast left-[40%] top-[10%] w-8 h-8 opacity-70" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M23.5 2.5C21.0147 2.5 18.7616 3.94643 17.5 6.02941C16.2384 3.94643 13.9853 2.5 11.5 2.5C7.35786 2.5 4 5.85786 4 10C4 18.5 17.5 26.5 17.5 26.5C17.5 26.5 31 18.5 31 10C31 5.85786 27.6421 2.5 23.5 2.5Z" fill="#f472b6"/>
-        </svg>
-        <svg className="absolute animate-float-medium right-[30%] top-[5%] w-9 h-9 opacity-60" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M23.5 2.5C21.0147 2.5 18.7616 3.94643 17.5 6.02941C16.2384 3.94643 13.9853 2.5 11.5 2.5C7.35786 2.5 4 5.85786 4 10C4 18.5 17.5 26.5 17.5 26.5C17.5 26.5 31 18.5 31 10C31 5.85786 27.6421 2.5 23.5 2.5Z" fill="#f472b6"/>
-        </svg>
-        <svg className="absolute animate-float-slow left-[15%] bottom-[8%] w-11 h-11 opacity-50" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M23.5 2.5C21.0147 2.5 18.7616 3.94643 17.5 6.02941C16.2384 3.94643 13.9853 2.5 11.5 2.5C7.35786 2.5 4 5.85786 4 10C4 18.5 17.5 26.5 17.5 26.5C17.5 26.5 31 18.5 31 10C31 5.85786 27.6421 2.5 23.5 2.5Z" fill="#f472b6"/>
-        </svg>
-        <svg className="absolute animate-float-fast right-[8%] bottom-[20%] w-7 h-7 opacity-50" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M23.5 2.5C21.0147 2.5 18.7616 3.94643 17.5 6.02941C16.2384 3.94643 13.9853 2.5 11.5 2.5C7.35786 2.5 4 5.85786 4 10C4 18.5 17.5 26.5 17.5 26.5C17.5 26.5 31 18.5 31 10C31 5.85786 27.6421 2.5 23.5 2.5Z" fill="#f472b6"/>
+
+        {/* Leaf 4 - right bottom */}
+        <svg className="absolute animate-float-slow right-[15%] bottom-[12%] w-9 h-9 opacity-25" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 5C50 5 35 20 35 40C35 55 40 65 50 70C60 65 65 55 65 40C65 20 50 5 50 5Z" fill="#c9975d" opacity="0.4"/>
+          <path d="M50 15C50 15 45 22 45 32C45 40 48 45 50 48C52 45 55 40 55 32C55 22 50 15 50 15Z" stroke="#8b6f47" strokeWidth="0.5"/>
         </svg>
       </div>
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-        <h1 className="text-gray-900 leading-none font-script text-[clamp(4rem,8vw,7rem)] drop-shadow-lg">Barbara</h1>
-        <p className="text-gray-700 text-3xl my-2 font-script">&</p>
-        <h1 className="text-gray-900 leading-none font-script text-[clamp(4rem,8vw,7rem)] drop-shadow-lg">Dilan</h1>
-        <p className="mt-6 text-gray-700 tracking-[0.35em] uppercase text-sm">20 July 2025</p>
+
+      {/* Foreground blur glow elements for depth */}
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-radial from-amber-900/5 to-transparent blur-3xl pointer-events-none" />
+      <div className="absolute top-1/3 right-0 w-80 h-80 bg-gradient-radial from-orange-800/3 to-transparent blur-3xl pointer-events-none" />
+
+      {/* Main Content - Premium Editorial Composition */}
+      <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4">
+        {/* Top spacing for cinematic composition */}
+        <div className="mb-4" />
+
+        {/* Bride Name - Editorial Scale */}
+        <h1 className="text-white leading-none font-script text-[clamp(3.5rem,10vw,8rem)] drop-shadow-2xl tracking-wider">
+          Александра
+        </h1>
+
+        {/* Elegant decorative divider */}
+        <div className="my-4 sm:my-6 flex items-center gap-3 opacity-80">
+          <div className="w-8 h-px bg-gradient-to-r from-transparent to-amber-100" />
+          <span className="text-white text-2xl font-script leading-none">&</span>
+          <div className="w-8 h-px bg-gradient-to-l from-transparent to-amber-100" />
+        </div>
+
+        {/* Groom Name - Editorial Scale */}
+        <h1 className="text-white leading-none font-script text-[clamp(3.5rem,10vw,8rem)] drop-shadow-2xl tracking-wider mb-6">
+          Максим
+        </h1>
+
+        {/* Small elegant metadata */}
+        <div className="space-y-2 text-amber-50 tracking-[0.2em] text-xs sm:text-sm">
+          <p className="uppercase opacity-90">20 July 2025</p>
+          <div className="w-12 h-px bg-gradient-to-r from-transparent via-amber-100 to-transparent mx-auto opacity-60" />
+        </div>
       </div>
     </section>
   );
